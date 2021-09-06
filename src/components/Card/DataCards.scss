@@ -1,0 +1,19 @@
+.covid-cards {
+  .container {
+    padding: 0 10rem;
+  }
+  .data-cards {
+    margin: 0.5rem 0.6rem;
+
+    .value {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .container {
+      padding: 0 1rem;
+    }
+  }
+}
