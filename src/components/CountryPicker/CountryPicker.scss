@@ -1,0 +1,45 @@
+.covid-country-picker {
+  margin: 5rem 0rem 0;
+  background-color: #fff;
+  padding: 3rem;
+  padding-bottom: 7rem;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+
+  .heading {
+    padding-right: 1rem;
+    font-family: "Syncopate", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 0 0 1rem 0;
+  }
+
+  .searchbox {
+    .input-group {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.country-data {
+  .country-name {
+    margin: 3rem 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .data-cards {
+    margin: 0.5rem 0.6rem;
+    border: solid 1px #000000;
+    @media only screen and (max-width: 768px) {
+      margin: 0.5rem 0rem;
+    }
+    .value {
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+  }
+}

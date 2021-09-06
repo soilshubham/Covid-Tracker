@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
-import { DataCards, Chart, Hero } from './components'
-import { getTotalData } from "./api";
+import { DataCards, CountryPicker, Hero } from './components'
+import { getTotalData, getCountries, getCountriesData } from "./api";
 import "./App.scss"
 
 const theme = createTheme({
@@ -17,23 +17,32 @@ const theme = createTheme({
 export default class App extends Component {
   state = {
     data: {},
+    countries: {},
+    countryData: {}
   }
-
 
   async componentDidMount() {
     const fetchedData = await getTotalData();
+    const fetchedCountries = await getCountries();
+    const fetchedCountriesData = await getCountriesData();
+
     this.setState({
-      data: fetchedData
+      data: fetchedData,
+      countries: fetchedCountries,
+      countryData: fetchedCountriesData
     })
-    console.log(this.state.data)
+
+    // console.log(this.state.countries)
   }
 
   render() {
-    const { data } = this.state
+    const { data, countries, countryData } = this.state
+
     return (
       <ThemeProvider theme={theme}>
         <Hero />
         <DataCards data={data} />
+        <CountryPicker data={countryData} countries={countries} />
       </ThemeProvider>
     );
   }

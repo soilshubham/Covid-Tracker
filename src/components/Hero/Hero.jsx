@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardContent, Typography, Grid } from "@material-ui/core"
+import { Card, CardContent, Typography, Grid, Link } from "@material-ui/core"
 import './Hero.scss'
 
 export const Hero = () => {
@@ -8,8 +8,17 @@ export const Hero = () => {
             <Typography variant="h3" align="center" className="heading" >
                 COVID TRACKER {new Date().getFullYear()}
             </Typography>
-            <Typography variant="subtitle1" align="center">
-                This application provides data on Covid-19 cases.
+            <Typography align="center" className="subheading">
+                This website provides you with global as well as country based daily reports on Covid-19.
+            </Typography>
+            <Typography align="center">
+                <Link href="https://linktr.ee/soilshubham" variant="subtitle1">
+                    Sahil Shubham
+                </Link>
+                {" "}|{" "}
+                <Link href="https://github.com/soilshubham/Covid-Tracker" variant="subtitle1">
+                    GitHub
+                </Link>
             </Typography>
         </div>
     )

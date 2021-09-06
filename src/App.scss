@@ -5,3 +5,15 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.wideFont {
+  font-family: "Syncopate", sans-serif !important;
+
+  &.bold {
+    font-weight: 700;
+  }
+
+  &.light {
+    font-weight: 300;
+  }
+}

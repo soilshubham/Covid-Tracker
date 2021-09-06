@@ -1,3 +1,3 @@
 export { DataCards } from './Card/DataCards'
-export { Chart } from './Chart/Chart'
+export { CountryPicker } from './CountryPicker/CountryPicker'
 export { Hero } from './Hero/Hero'
