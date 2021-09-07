@@ -7,7 +7,6 @@ export const getTotalData = async () => {
         const data = await axios.get(`${url}/totals`)
         return data.data[0]
     } catch (error) {
-        console.log(error)
     }
 }
 export const getCountries = async () => {
@@ -15,7 +14,6 @@ export const getCountries = async () => {
         const data = await axios.get(`${url}/help/countries`)
         return data.data
     } catch (error) {
-        console.log(error)
     }
 }
 export const getCountriesData = async () => {
@@ -23,6 +21,5 @@ export const getCountriesData = async () => {
         const data = await axios.get(`${url}/country/all`)
         return data.data
     } catch (error) {
-        console.log(error)
     }
 }
