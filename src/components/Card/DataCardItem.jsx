@@ -11,7 +11,7 @@ export const DataCardItem = ({ title, value = "Loading...", date = "Loading..." 
                         {title}
                     </Typography>
                     <Typography >
-                        <CountUp start={0} end={value} duration={1} separator="," className="value " />
+                        <CountUp start={0} end={value} duration={1} separator="," className="value" />
                     </Typography>
                     <Typography color="textSecondary">
                         {new Date(date).toDateString()}

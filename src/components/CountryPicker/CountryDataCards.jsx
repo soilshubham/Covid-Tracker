@@ -2,7 +2,7 @@ import React from 'react'
 import { CountryDataCardItem } from './CountryDataCardItem'
 import { Grid, Typography } from "@material-ui/core"
 
-export const CountryDataCards = ({ data: { confirmed = "", recovered = "", deaths = "", lastUpdate = "", country = "", code = "" } }) => {
+export const CountryDataCards = ({ data: { confirmed, recovered, deaths, lastUpdate, country, code } }) => {
     return (
         <div className="country-data">
             <div className="container">

@@ -13,7 +13,6 @@ const theme = createTheme({
   },
 });
 
-
 export default class App extends Component {
   state = {
     data: {},
@@ -31,13 +30,10 @@ export default class App extends Component {
       countries: fetchedCountries,
       countryData: fetchedCountriesData
     })
-
-    // console.log(this.state.countries)
   }
 
   render() {
     const { data, countries, countryData } = this.state
-
     return (
       <ThemeProvider theme={theme}>
         <Hero />
