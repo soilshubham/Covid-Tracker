@@ -6,6 +6,13 @@ import { CountryDataCards } from './CountryDataCards'
 
 export const CountryPicker = ({ countries, data }) => {
     const [countryData, setCountryData] = useState(null);
+
+    useEffect(() => {
+        if (localStorage.getItem("selectedCountry") != null) {
+            let localCountryData = localStorage.getItem("selectedCountry")
+            setCountryData(JSON.parse(localCountryData))
+        }
+    }, [data])
     return (
         <div className="covid-country-picker">
             <div className="searchbox">
@@ -19,7 +26,11 @@ export const CountryPicker = ({ countries, data }) => {
                         getOptionLabel={(option) => option.country}
                         style={{ width: 350 }}
                         renderInput={(params) => <TextField {...params} label="Search By Country" variant="outlined" />}
-                        onChange={(event, newValue) => { setCountryData(newValue); console.log(newValue) }
+                        onChange={(event, newValue) => {
+                            setCountryData(newValue)
+                            localStorage.setItem("selectedCountry", JSON.stringify(newValue));
+                            console.log(newValue)
+                        }
                         }
                     />
                 </div>

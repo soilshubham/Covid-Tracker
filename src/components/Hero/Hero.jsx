@@ -12,11 +12,11 @@ export const Hero = () => {
                 This website provides you with global as well as country based daily reports on Covid-19.
             </Typography>
             <Typography align="center">
-                <Link href="https://linktr.ee/soilshubham" variant="subtitle1">
+                <Link href="https://linktr.ee/soilshubham" variant="subtitle1" target="_blank">
                     Sahil Shubham
                 </Link>
                 {" "}|{" "}
-                <Link href="https://github.com/soilshubham/Covid-Tracker" variant="subtitle1">
+                <Link href="https://github.com/soilshubham/Covid-Tracker" variant="subtitle1" target="_blank">
                     GitHub
                 </Link>
             </Typography>
